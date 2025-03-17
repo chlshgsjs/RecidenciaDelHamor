@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residencia del Hamor Beach Front</title>
+    <!-- Include Montserrat font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./output.css">
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        }
+    </script>
+</head>
+<body class="bg-[#fafafa] text-[#333] font-sans text-base m-0 p-0">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-8 py-3 bg-transparent transition-colors duration-300 text-white">
+        <div class="flex items-center">
+            <img id="logo" src="img/logow.png" alt="Resort Logo" class="h-12 md:h-16">
+        </div>
+        <!-- Desktop & Tablet Menu (Hidden on Phones) -->
+        <div class="hidden sm:flex items-center">
+            <ul class="flex space-x-5 m-0 p-0 list-none">
+                <li><a href="index.html" class="px-5 py-3 underline underline-offset-8 decoration-2 transition-colors duration-300 hover:bg-gray-200 hover:text-black">Home</a></li>
+                <li><a href="accommodations.html" class="px-5 py-3 no-underline transition-colors duration-300 hover:bg-gray-200 hover:text-black">Accommodations</a></li>
+                <li><a href="amenities.html" class="px-5 py-3 no-underline transition-colors duration-300 hover:bg-gray-200 hover:text-black">Amenities</a></li>
+                <li><a href="booking.html" class="px-5 py-3 no-underline transition-colors duration-300 hover:bg-gray-200 hover:text-black">Book</a></li>
+                <li><a href="contact.html" class="px-5 py-3 no-underline transition-colors duration-300 hover:bg-gray-200 hover:text-black">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Menu Button (Only visible on Phones) -->
+        <button class="sm:hidden text-white focus:outline-none" onclick="toggleMenu()">
+            <i data-lucide="menu" class="w-8 h-8"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default, appears when button is clicked) -->
+    <div id="mobile-menu" class="hidden z-50 fixed top-0 left-0 w-full h-screen bg-black bg-opacity-90 text-white flex flex-col items-center justify-center space-y-6 sm:hidden">
+        <button class="absolute top-5 right-5 text-white focus:outline-none" onclick="toggleMenu()">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <a href="index.html" class="text-xl font-semibold hover:text-gray-400">Home</a>
+        <a href="accommodations.html" class="text-xl font-semibold hover:text-gray-400">Accommodations</a>
+        <a href="amenities.html" class="text-xl font-semibold hover:text-gray-400">Amenities</a>
+        <a href="booking.html" class="text-xl font-semibold hover:text-gray-400">Book</a>
+        <a href="contact.html" class="text-xl font-semibold hover:text-gray-400">Contact</a>
+    </div>
+        <!-- Hero Section -->
+        <section class="h-screen relative overflow-hidden">
+            <div class="relative w-full h-full">
+                <img src="img/212.jpg" alt="Hero Image" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black opacity-20"></div>
+            </div>
+            <div class="absolute top-1/2 left-[5%] transform -translate-y-1/2 text-white text-4xl p-5">
+                <h1 class="mb-0 font-black text-3xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl" style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.288);">RECIDENCIA DEL HAMOR BEACH FRONT</h1>
+                <p class="mt-0 text-xl sm:text-sm md:text-lg lg:text-xl xl:text-2xl" style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.288);">Experience the ultimate beachfront getaway</p>
+            </div>
+        </section>
+        <div class="flex gap-[2%] flex-wrap content-start py-4 mt-[20vh]">
+            <div class="w-full h-[45vh] flex items-center justify-center py-[15vh]">
+                <div class="w-4/5 text-center border-2 border-[#316463] p-10">
+                <p class="text-[#316463]">RECIDENCIA</p> 
+                <h1 class="mb-0 font-thin text-3xl text-[#316463]"> DEL HAMOR</h1>
+                <p class="text-[#316463]">BEACH FRONT</p><br>
+                <p>Recidencia Del Hamor Beach Front is a Mediterranean style Beach Resort located at the south tip-end of Luzon. A perfect choice for a long vacation immersed in the relaxing atmosphere of a crystalline water and an artistic scenery of the place.</p>    
+                <img src="img/logo1.png" alt="" class="w-1/4 h-1/4 mx-auto">
+                </div>
+            </div>
+            <!-- <div class="absolute -z-10 w-full h-[0vh] bg-[#316463]">
+            </div> -->
+            <div class="w-full h-[75vh] flex items-center justify-center py-8 mt-[20vh]">
+                <div class="w-full h-full relative">
+                    <video class="w-full h-full object-cover" autoplay loop muted>
+                        <source src="vid/2vid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="h-screen flex flex-col items-center justify-center p-5 py-[10vh] my-[5vh]">
+            <div class="w-full h-[5%] flex items-center justify-center text-2xl text-[#033360] p-5">
+                ACCOMMODATIONS
+            </div>
+            <div class="relative w-full h-full flex justify-center overflow-hidden pt-0">
+                <div id="swiper" class="relative flex items-center justify-center w-full overflow-hidden">
+                    <div class="swiper-item w-full md:w-[90%] lg:w-[70%] h-[70vh] md:h-[60vh] lg:h-[70vh] absolute transition-transform duration-500 ease-in-out opacity-50 blur-md">
+                        <div class="w-full h-full flex flex-col md:flex-row gap-4 p-4">
+                            <!-- Text and Details Section -->
+                            <div class="w-full md:w-1/3 h-1/2 md:h-full flex shadow-xl bg-white text-[#033360] p-4 overflow-y-auto">
+                                <div class="w-full max-w-md h-full flex flex-col justify-between">
+                                    <div class="lg:px-[2vh] lg:py-[3vh]">
+                                        <h1 class="text-2xl md:text-3xl mb-5">Junior Suite</h1>
+                                        <div class="flex flex-wrap gap-2 text-[#033360]">
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bed-single">
+                                                    <path d="M3 20v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8"/>
+                                                    <path d="M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/>
+                                                    <path d="M3 18h18"/>
+                                                </svg>
+                                                <span class="text-xs">1 Queen Bed</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-waves">
+                                                    <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                                                    <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                                                    <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                                                </svg>
+                                                <span class="text-xs">Sea View</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-air-vent">
+                                                    <path d="M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                                                    <path d="M6 8h12"/>
+                                                    <path d="M18.3 17.7a2.5 2.5 0 0 1-3.16 3.83 2.53 2.53 0 0 1-1.14-2V12"/>
+                                                    <path d="M6.6 15.6A2 2 0 1 0 10 17v-5"/>
+                                                </svg>
+                                                <span class="text-xs">Air Conditioning</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi">
+                                                    <path d="M12 20h.01"/>
+                                                    <path d="M2 8.82a15 15 0 0 1 20 0"/>
+                                                    <path d="M5 12.859a10 10 0 0 1 14 0"/>
+                                                    <path d="M8.5 16.429a5 5 0 0 1 7 0"/>
+                                                </svg>
+                                                <span class="text-xs">Free WiFi</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-center border-t border-gray-300 pt-2">
+                                            <div class="flex-1">
+                                                <p class="text-xl">25 m²</p>
+                                                <p class="text-xs">Room Size</p>
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="text-xl">2</p>
+                                                <p class="text-xs">Max Guests</p>
+                                            </div>
+                                        </div>
+                                        <div class="mt-5 lg:pb-[3vh] text-center">
+                                            <p class="text-2xl font-bold text-[#033360]">₱13,000.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Image Section -->
+                            <div class="w-full md:w-2/3 h-1/2 md:h-full flex items-center justify-center shadow-xl">
+                                <img src="img/rooms/jr1.webp" alt="Junior Suite" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-item w-full md:w-[90%] lg:w-[70%] h-[70vh] md:h-[60vh] lg:h-[70vh] absolute transition-transform duration-500 ease-in-out opacity-50 blur-md">
+                        <div class="w-full h-full flex flex-col md:flex-row gap-4 p-4">
+                            <!-- Text and Details Section -->
+                            <div class="w-full md:w-1/3 h-1/2 md:h-full flex shadow-xl bg-white text-[#033360] p-4 overflow-y-auto">
+                                <div class="w-full max-w-md h-full flex flex-col justify-between">
+                                    <div class="lg:px-[2vh] lg:py-[3vh]">
+                                        <h1 class="text-2xl md:text-3xl mb-5">Deluxe Room</h1>
+                                        <div class="flex flex-wrap gap-2 text-[#033360]">
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bed-single">
+                                                    <path d="M3 20v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8"/>
+                                                    <path d="M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/>
+                                                    <path d="M3 18h18"/>
+                                                </svg>
+                                                <span class="text-xs">1 Queen Bed</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-waves">
+                                                    <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                                                    <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                                                    <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                                                </svg>
+                                                <span class="text-xs">Sea View</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-air-vent">
+                                                    <path d="M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                                                    <path d="M6 8h12"/>
+                                                    <path d="M18.3 17.7a2.5 2.5 0 0 1-3.16 3.83 2.53 2.53 0 0 1-1.14-2V12"/>
+                                                    <path d="M6.6 15.6A2 2 0 1 0 10 17v-5"/>
+                                                </svg>
+                                                <span class="text-xs">Air Conditioning</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi">
+                                                    <path d="M12 20h.01"/>
+                                                    <path d="M2 8.82a15 15 0 0 1 20 0"/>
+                                                    <path d="M5 12.859a10 10 0 0 1 14 0"/>
+                                                    <path d="M8.5 16.429a5 5 0 0 1 7 0"/>
+                                                </svg>
+                                                <span class="text-xs">Free WiFi</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-center border-t border-gray-300 pt-2">
+                                            <div class="flex-1">
+                                                <p class="text-xl">30 m²</p>
+                                                <p class="text-xs">Room Size</p>
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="text-xl">2</p>
+                                                <p class="text-xs">Max Guests</p>
+                                            </div>
+                                        </div>
+                                        <div class="mt-5 lg:pb-[3vh] text-center">
+                                            <p class="text-2xl font-bold text-[#033360]">₱15,000.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Image Section -->
+                            <div class="w-full md:w-2/3 h-1/2 md:h-full flex items-center justify-center shadow-xl">
+                                <img src="img/rooms/del1.jpg" alt="Junior Suite" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-item w-full md:w-[90%] lg:w-[70%] h-[70vh] md:h-[60vh] lg:h-[70vh] absolute transition-transform duration-500 ease-in-out opacity-50 blur-md">
+                        <div class="w-full h-full flex flex-col md:flex-row gap-4 p-4">
+                            <!-- Text and Details Section -->
+                            <div class="w-full md:w-1/3 h-1/2 md:h-full flex shadow-xl bg-white text-[#033360] p-4 overflow-y-auto">
+                                <div class="w-full max-w-md h-full flex flex-col justify-between">
+                                    <div class="lg:px-[2vh] lg:py-[3vh]">
+                                        <h1 class="text-2xl md:text-3xl mb-5">Presidential Suite</h1>
+                                        <div class="flex flex-wrap gap-2 text-[#033360]">
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bed-single">
+                                                    <path d="M3 20v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8"/>
+                                                    <path d="M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/>
+                                                    <path d="M3 18h18"/>
+                                                </svg>
+                                                <span class="text-xs">1 Queen Bed</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-waves">
+                                                    <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                                                    <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                                                    <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                                                </svg>
+                                                <span class="text-xs">Sea View</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-air-vent">
+                                                    <path d="M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                                                    <path d="M6 8h12"/>
+                                                    <path d="M18.3 17.7a2.5 2.5 0 0 1-3.16 3.83 2.53 2.53 0 0 1-1.14-2V12"/>
+                                                    <path d="M6.6 15.6A2 2 0 1 0 10 17v-5"/>
+                                                </svg>
+                                                <span class="text-xs">Air Conditioning</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 bg-blue-200 p-2 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi">
+                                                    <path d="M12 20h.01"/>
+                                                    <path d="M2 8.82a15 15 0 0 1 20 0"/>
+                                                    <path d="M5 12.859a10 10 0 0 1 14 0"/>
+                                                    <path d="M8.5 16.429a5 5 0 0 1 7 0"/>
+                                                </svg>
+                                                <span class="text-xs">Free WiFi</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-center border-t border-gray-300 pt-2">
+                                            <div class="flex-1">
+                                                <p class="text-xl">35 m²</p>
+                                                <p class="text-xs">Room Size</p>
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="text-xl">2</p>
+                                                <p class="text-xs">Max Guests</p>
+                                            </div>
+                                        </div>
+                                        <div class="mt-5 lg:pb-[3vh] text-center">
+                                            <p class="text-2xl font-bold text-[#033360]">₱22,000.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Image Section -->
+                            <div class="w-full md:w-2/3 h-1/2 md:h-full flex items-center justify-center shadow-xl">
+                                <img src="img/rooms/pr1.webp" alt="Junior Suite" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more swiper items here -->
+                </div>
+                <!-- Swiper Navigation Buttons -->
+                <button id="swiper-prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-50 cursor-pointer">
+                    &#10094;
+                </button>
+                <button id="swiper-next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-50 cursor-pointer">
+                    &#10095;
+                </button>
+            </div>
+        </div>
+        <div class="flex gap-[2%] flex-wrap content-start">
+            <div class="w-full h-[110vh] bg-gray-200 flex items-center justify-center">
+                <img src="img/22.jpg" alt="Hero Image" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center items-center h-auto lg:px-[10vh] my-[5vh] md:h-[75vh] md:mt-[20vh] px-5">
+            <!-- Image Section -->
+            <div class="w-full md:w-1/3 h-[40vh] md:h-3/4 bg-gray-400 flex items-center justify-center">
+                <img src="img/amenities/sn.avif" alt="" class="w-full h-full object-cover">
+            </div>
+
+            <div class="w-full md:w-3/5 h-auto md:h-3/4 p-6 md:p-[5vh] md:pr-[10vh] flex flex-col ">
+                <p class="text-[#316463] text-2xl md:text-4xl mb-3 md:mb-5">
+                    Luxury & Adventure by the Sea
+                </p>
+                <p class="mb-3 md:mb-5 text-sm md:text-base">
+                    Escape to a beachfront paradise where relaxation meets adventure. Lounge by the pool, swim in the crystal-clear sea, and take in breathtaking island sunsets. For those seeking more excitement, unforgettable experiences await just beyond the shore.
+                </p>
+                <a href="booking.html" class="w-2/3 md:w-1/3 bg-[#d1a657] text-white px-6 py-3 text-sm font-semibold rounded-full shadow-md hover:bg-[#4f3e27] transition-all duration-300 text-center">
+                    Book Your Stay Now
+                </a>
+            </div>
+        </div>
+        <footer>
+            <!-- Main Footer Section -->
+            <div class="w-full bg-[#033360] flex flex-col md:flex-row p-8 md:p-[10vh] text-white text-center md:text-left space-y-6 md:space-y-0">
+                <!-- Logo & Name -->
+                <div class="flex-1 flex flex-col items-center md:items-start">
+                    <img src="img/logow.png" alt="Logo" class="w-1/2 md:w-1/3">
+                    <h1 class="text-lg md:text-xl font-semibold mt-2">Recidencia del Hamor Beach Front</h1>
+                </div>
+        
+                <!-- Contact Details -->
+                <div class="flex-1 flex flex-col items-center md:items-start">
+                    <p class="text-base md:text-lg font-medium">Mobile: (+63) 905 245 1920</p>
+                    <p class="text-sm md:text-base">Email: reservations@recidenciadelhamorbeachfront.com.ph</p>
+                </div>
+        
+                <!-- Address -->
+                <div class="flex-1 flex flex-col items-center md:items-start">
+                    <p class="text-sm md:text-base">
+                        Address: Brgy. San Sebastian, Sta. Magdalena, Santa Magdalena, Philippines, 4709
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Copyright Section -->
+            <div class="w-full bg-blue-200 p-5 text-[#033360] text-xs md:text-sm text-center">
+                <p>Recidencia Del Hamor Beach Front © 2025 All rights reserved</p>
+            </div>
+        </footer>
+        
+        <script>
+            const swiper = document.getElementById('swiper');
+const prevBtn = document.getElementById('swiper-prev');
+const nextBtn = document.getElementById('swiper-next');
+const items = document.querySelectorAll('.swiper-item');
+let currentIndex = 0;
+
+function updateSwiper() {
+    items.forEach((item, index) => {
+        if (index === currentIndex) {
+            item.style.transform = "translateX(0) scale(1)";
+            item.style.opacity = "1";
+            item.style.filter = "blur(0)";
+            item.style.zIndex = "10";
+        } else {
+            item.style.transform = index < currentIndex ? "translateX(-50%) scale(0.8)" : "translateX(50%) scale(0.8)";
+            item.style.opacity = "0.5";
+            item.style.filter = "blur(5px)";
+            item.style.zIndex = "5";
+        }
+    });
+}
+
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateSwiper();
+});
+
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateSwiper();
+});
+
+updateSwiper();
+        </script>
+    <script>
+        lucide.createIcons();
+    </script>
+        <script>
+            const navbar = document.getElementById('navbar');
+            const logo = document.getElementById('logo'); // Get the logo element
+            const heroSection = document.querySelector('section');
+        
+            window.addEventListener('scroll', () => {
+                // Check if the user has scrolled past the hero section
+                if (window.scrollY != 0) {
+                    navbar.classList.add('bg-white/80', 'text-[#316463]'); // Add white background and black text
+                    navbar.classList.remove('bg-transparent', 'text-white'); // Remove transparent background and white text
+                    logo.src = "img/logo.png"; // Change logo to the dark version
+                } else {
+                    navbar.classList.remove('bg-white/80', 'text-[#316463]'); // Remove white background and black text
+                    navbar.classList.add('bg-transparent', 'text-white'); // Add transparent background and white text
+                    logo.src = "img/logow.png"; // Change logo back to the light version
+                }
+            });
+            
+        </script>
+</body>
+</html>

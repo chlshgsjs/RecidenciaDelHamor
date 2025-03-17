@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residencia del Hamor Beach Front</title>
+    <!-- Include Montserrat font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./output.css">
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        }
+    </script>
+</head>
+<body class="bg-[#fafafa] text-[#333] font-sans text-base m-0 p-0">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-8 py-3 bg-transparent transition-colors duration-300 text-white">
+        <div class="flex items-center">
+            <img id="logo" src="img/logow.png" alt="Resort Logo" class="h-12 md:h-16">
+        </div>
+        <!-- Desktop & Tablet Menu (Hidden on Phones) -->
+        <div class="hidden sm:flex items-center">
+            <ul class="flex space-x-5 m-0 p-0 list-none">
+                <li><a href="index.html" class="px-5 py-3 no-underline transition-colors duration-300 hover:bg-gray-200 hover:text-black">Home</a></li>
+                <li><a href="accommodations.html" class="px-5 py-3 no-underline transition-colors duration-300 hover:bg-gray-200 hover:text-black">Accommodations</a></li>
+                <li><a href="amenities.html" class="px-5 py-3 underline underline-offset-8 decoration-2 transition-colors duration-300 hover:bg-gray-200 hover:text-black">Amenities</a></li>
+                <li><a href="booking.html" class="px-5 py-3 no-underline transition-colors duration-300 hover:bg-gray-200 hover:text-black">Book</a></li>
+                <li><a href="contact.html" class="px-5 py-3 no-underline transition-colors duration-300 hover:bg-gray-200 hover:text-black">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Menu Button (Only visible on Phones) -->
+        <button class="sm:hidden text-white focus:outline-none" onclick="toggleMenu()">
+            <i data-lucide="menu" class="w-8 h-8"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default, appears when button is clicked) -->
+    <div id="mobile-menu" class="hidden z-50 fixed top-0 left-0 w-full h-screen bg-black bg-opacity-90 text-white flex flex-col items-center justify-center space-y-6 sm:hidden">
+        <button class="absolute top-5 right-5 text-white focus:outline-none" onclick="toggleMenu()">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <a href="index.html" class="text-xl font-semibold hover:text-gray-400">Home</a>
+        <a href="accommodations.html" class="text-xl font-semibold hover:text-gray-400">Accommodations</a>
+        <a href="amenities.html" class="text-xl font-semibold hover:text-gray-400">Amenities</a>
+        <a href="booking.html" class="text-xl font-semibold hover:text-gray-400">Book</a>
+        <a href="contact.html" class="text-xl font-semibold hover:text-gray-400">Contact</a>
+    </div>
+        <!-- Hero Section -->
+        <section class="h-[70vh] relative overflow-hidden">
+            <div class="relative w-full h-full">
+                <img src="img/29.jpg" alt="Hero Image" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black opacity-20"></div>
+            </div>
+            <div class="absolute top-3/4 left-[5%] transform -translate-y-1/2 text-white text-4xl p-5">
+                <h1 class="mb-0 font-black text-3xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl" style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.288);">AMENITIES</h1>
+                <p class="mt-0 text-xl sm:text-sm md:text-lg lg:text-xl xl:text-2xl" style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.288);">Discover our world-class facilities</p>
+            </div>
+        </section>
+        <div class="h-screen flex flex-col items-center justify-center p-5 py-[10vh] my-[5vh]">
+            <div class="relative w-full h-full flex justify-center overflow-hidden pt-0">
+                <div id="swiper" class="relative flex items-center justify-center w-full overflow-hidden">
+                    <!-- Swiper Item -->
+                    <div class="swiper-item w-full md:w-[90%] lg:w-[70%] h-[70vh] md:h-[60vh] lg:h-[70vh] absolute transition-transform duration-500 ease-in-out opacity-50 blur-md">
+                        <div class="relative w-full h-full">
+                            <!-- Background Image -->
+                            <img src="img/33.jpg" alt="Junior Suite" class="w-full h-full object-cover">
+        
+                            <!-- Black Gradient Overlay (40% width, full height) -->
+                            <div class="absolute inset-y-0 right-0 w-[90%] bg-gradient-to-l from-[#033360]/80 to-transparent"></div>
+        
+                            <!-- Text Content (Right-Aligned) -->
+                            <div class="absolute top-1/2 right-[5%] transform -translate-y-1/2 text-white p-6 max-w-sm rounded-lg shadow-lg">
+                                <h1 class="text-3xl font-bold mb-3">DAY TOUR</h1>
+                                <div class="flex justify-between text-center border-t border-gray-300 pt-2 mt-3">
+                                    
+                                </div>
+                                <!-- <div class="mt-5 text-center">
+                                    <p class="text-2xl font-bold text-[#FFD700]">₱13,000.00</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-item w-full md:w-[90%] lg:w-[70%] h-[70vh] md:h-[60vh] lg:h-[70vh] absolute transition-transform duration-500 ease-in-out opacity-50 blur-md">
+                        <div class="relative w-full h-full">
+                            <!-- Background Image -->
+                            <img src="img/17.webp" alt="Junior Suite" class="w-full h-full object-cover">
+        
+                            <!-- Black Gradient Overlay (40% width, full height) -->
+                            <div class="absolute inset-y-0 right-0 w-[90%] bg-gradient-to-l from-[#033360]/80 to-transparent"></div>
+        
+                            <!-- Text Content (Right-Aligned) -->
+                            <div class="absolute top-1/2 right-[5%] transform -translate-y-1/2 text-white p-6 max-w-sm rounded-lg shadow-lg">
+                                <h1 class="text-3xl font-bold mb-3">PARASOL COTTAGE</h1>
+                                <div class="flex justify-between text-center border-t border-gray-300 pt-2 mt-3">
+                                    
+                                </div>
+                                <!-- <div class="mt-5 text-center">
+                                    <p class="text-2xl font-bold text-[#FFD700]">₱13,000.00</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-item w-full md:w-[90%] lg:w-[70%] h-[70vh] md:h-[60vh] lg:h-[70vh] absolute transition-transform duration-500 ease-in-out opacity-50 blur-md">
+                        <div class="relative w-full h-full">
+                            <!-- Background Image -->
+                            <img src="img/amenities/cabana.webp" alt="Junior Suite" class="w-full h-full object-cover">
+        
+                            <!-- Black Gradient Overlay (40% width, full height) -->
+                            <div class="absolute inset-y-0 right-0 w-[90%] bg-gradient-to-l from-[#033360]/80 to-transparent"></div>
+        
+                            <!-- Text Content (Right-Aligned) -->
+                            <div class="absolute top-1/2 right-[5%] transform -translate-y-1/2 text-white p-6 max-w-sm rounded-lg shadow-lg">
+                                <h1 class="text-3xl font-bold mb-3">CABANA</h1>
+                                <div class="flex justify-between text-center border-t border-gray-300 pt-2 mt-3">
+                                    
+                                </div>
+                                <!-- <div class="mt-5 text-center">
+                                    <p class="text-2xl font-bold text-[#FFD700]">₱13,000.00</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more swiper items here with the same structure -->
+        
+                </div>
+        
+                <!-- Swiper Navigation Buttons -->
+                <button id="swiper-prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-50 cursor-pointer">
+                    &#10094;
+                </button>
+                <button id="swiper-next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-50 cursor-pointer">
+                    &#10095;
+                </button>
+            </div>
+        </div>
+        <div class="container mx-auto px-5 py-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Kayaking -->
+                <div class="group relative w-full h-[40vh] rounded-lg overflow-hidden shadow-lg">
+                    <img src="img/7.webp" alt="Kayaking" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 text-white text-center">
+                        <div>
+                            <h2 class="text-2xl font-bold">Kayaking</h2>
+                            <p class="mt-2 text-sm sm:text-base">Enjoy a scenic kayaking experience in crystal-clear waters.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Scuba Diving -->
+                <div class="group relative w-full h-[40vh] rounded-lg overflow-hidden shadow-lg">
+                    <img src="img/amenities/sd.jpeg" alt="Scuba Diving" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 text-white text-center">
+                        <div>
+                            <h2 class="text-2xl font-bold">Scuba Diving</h2>
+                            <p class="mt-2 text-sm sm:text-base">Explore vibrant marine life with a professional diving guide.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Snorkeling -->
+                <div class="group relative w-full h-[40vh] rounded-lg overflow-hidden shadow-lg">
+                    <img src="img/amenities/sn2.jpeg" alt="Snorkeling" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 text-white text-center">
+                        <div>
+                            <h2 class="text-2xl font-bold">Snorkeling</h2>
+                            <p class="mt-2 text-sm sm:text-base">Experience shallow-water wonders with colorful coral reefs.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Island Hopping -->
+                <div class="group relative w-full h-[40vh] rounded-lg overflow-hidden shadow-lg">
+                    <img src="img/amenities/island.jpeg" alt="Island Hopping" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 text-white text-center">
+                        <div>
+                            <h2 class="text-2xl font-bold">Island Hopping</h2>
+                            <p class="mt-2 text-sm sm:text-base">Visit stunning islands and hidden beaches in an unforgettable journey.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative w-full h-[40vh] rounded-lg overflow-hidden shadow-lg">
+                    <img src="img/amenities/spa.jpg" alt="Spa" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 text-white text-center">
+                        <div>
+                            <h2 class="text-2xl font-bold">Spa</h2>
+                            <p class="mt-2 text-sm sm:text-base">Relax and rejuvenate with soothing massages, aromatherapy, and luxurious wellness treatments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative w-full h-[40vh] rounded-lg overflow-hidden shadow-lg">
+                    <img src="img/29.jpg" alt="Dining" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 text-white text-center">
+                        <div>
+                            <h2 class="text-2xl font-bold">Dining</h2>
+                            <p class="mt-2 text-sm sm:text-base">Savor exquisite flavors with gourmet dishes, fresh seafood, and stunning ocean views.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-[15vh]">
+            <img src="img/15.webp" alt="">
+        </div>
+    
+        <footer>
+            <!-- Main Footer Section -->
+            <div class="w-full bg-[#033360] flex flex-col md:flex-row p-8 md:p-[10vh] text-white text-center md:text-left space-y-6 md:space-y-0">
+                <!-- Logo & Name -->
+                <div class="flex-1 flex flex-col items-center md:items-start">
+                    <img src="img/logow.png" alt="Logo" class="w-1/2 md:w-1/3">
+                    <h1 class="text-lg md:text-xl font-semibold mt-2">Recidencia del Hamor Beach Front</h1>
+                </div>
+        
+                <!-- Contact Details -->
+                <div class="flex-1 flex flex-col items-center md:items-start">
+                    <p class="text-base md:text-lg font-medium">Mobile: (+63) 905 245 1920</p>
+                    <p class="text-sm md:text-base">Email: reservations@recidenciadelhamorbeachfront.com.ph</p>
+                </div>
+        
+                <!-- Address -->
+                <div class="flex-1 flex flex-col items-center md:items-start">
+                    <p class="text-sm md:text-base">
+                        Address: Brgy. San Sebastian, Sta. Magdalena, Santa Magdalena, Philippines, 4709
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Copyright Section -->
+            <div class="w-full bg-blue-200 p-5 text-[#033360] text-xs md:text-sm text-center">
+                <p>Recidencia Del Hamor Beach Front © 2025 All rights reserved</p>
+            </div>
+        </footer>
+        
+        <script>
+            lucide.createIcons();
+        </script>
+            <script>
+                const navbar = document.getElementById('navbar');
+                const logo = document.getElementById('logo'); // Get the logo element
+                const heroSection = document.querySelector('section');
+            
+                window.addEventListener('scroll', () => {
+                    // Check if the user has scrolled past the hero section
+                    if (window.scrollY != 0) {
+                        navbar.classList.add('bg-white/80', 'text-[#316463]'); // Add white background and black text
+                        navbar.classList.remove('bg-transparent', 'text-white'); // Remove transparent background and white text
+                        logo.src = "img/logo.png"; // Change logo to the dark version
+                    } else {
+                        navbar.classList.remove('bg-white/80', 'text-[#316463]'); // Remove white background and black text
+                        navbar.classList.add('bg-transparent', 'text-white'); // Add transparent background and white text
+                        logo.src = "img/logow.png"; // Change logo back to the light version
+                    }
+                });
+                
+            </script>
+                <script>
+                    const swiper = document.getElementById('swiper');
+        const prevBtn = document.getElementById('swiper-prev');
+        const nextBtn = document.getElementById('swiper-next');
+        const items = document.querySelectorAll('.swiper-item');
+        let currentIndex = 0;
+        
+        function updateSwiper() {
+            items.forEach((item, index) => {
+                if (index === currentIndex) {
+                    item.style.transform = "translateX(0) scale(1)";
+                    item.style.opacity = "1";
+                    item.style.filter = "blur(0)";
+                    item.style.zIndex = "10";
+                } else {
+                    item.style.transform = index < currentIndex ? "translateX(-50%) scale(0.8)" : "translateX(50%) scale(0.8)";
+                    item.style.opacity = "0.5";
+                    item.style.filter = "blur(5px)";
+                    item.style.zIndex = "5";
+                }
+            });
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateSwiper();
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateSwiper();
+        });
+        
+        updateSwiper();
+                </script>
+</body>
+</html>
